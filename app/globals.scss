@@ -1,0 +1,41 @@
+/* ------------------------------ Fonts ------------------------------ */
+@font-face {
+    font-family: 'Cinzel Decorative Black';
+    src: url(/public/fonts/Cinzel_Decorative_Black.ttf);
+}
+
+$font: 'Cinzel Decorative Black', sans-serif;
+
+/* ------------------------------ Basics ------------------------------ */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style-type: none;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    margin: auto;
+    user-select: none;
+    overflow: hidden;
+}
+
+p {
+    font-family: $font;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
