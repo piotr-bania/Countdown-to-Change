@@ -15,12 +15,13 @@ const NYE_Countdown_Text = () => {
 
     const font = './fonts/Cinzel_Decorative_Black.ttf'
     const fontSize = 0.5
-    const fontColor = '#ffffff'
+    const fontColor = '#CEBBC2'
 
     return (
         <mesh
-            position={[0, 0, 1.1]}
-            scale={.5}
+            position={[0, 0.5, 0]}
+            // rotation={[-Math.PI * .08, 0, 0]}
+            // scale={.5}
             castShadow
             receiveShadow
         >

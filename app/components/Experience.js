@@ -12,7 +12,13 @@ const Experience = () => {
         <group>
             <NYE_Countdown_Text />
 
-            <mesh ref={sceneRef}>
+            <mesh
+                ref={sceneRef}
+                scale={2}
+                position={[0, -1.5, 0]}
+                castShadow
+                receiveShadow
+                >
                 <primitive object={scene.scene} />
             </mesh>
         </group>

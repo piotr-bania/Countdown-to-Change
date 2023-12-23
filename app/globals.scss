@@ -6,6 +6,10 @@
 
 $font: 'Cinzel Decorative Black', sans-serif;
 
+/* ------------------------------ Globals ------------------------------ */
+$background: #000000;
+$text: #CEBBC2;
+
 /* ------------------------------ Basics ------------------------------ */
 * {
     box-sizing: border-box;
@@ -19,8 +23,8 @@ html {
 }
 
 body {
-    background: #000000;
-    color: #ffffff;
+    background: $background;
+    color: $text;
     margin: auto;
     user-select: none;
     overflow: hidden;
