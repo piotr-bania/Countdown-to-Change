@@ -7,7 +7,7 @@ import Water from './models/Water'
 
 const Experience = () => {
     return (
-        <group position={[0, -.5, 0]}>
+        <group position={[0, -.25, 0]}>
             <Seconds_Hand />
             <Minutes_Hand />
             <Hours_Hand />
