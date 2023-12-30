@@ -1,7 +1,7 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber'
-import { Environment, OrbitControls, PerspectiveCamera, SoftShadows } from '@react-three/drei'
+import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { motion as m } from 'framer-motion'
 import { canvas_variant } from './animations/Framer_Motion_Variants'
 import Experience from './Experience'
@@ -17,30 +17,27 @@ const NYE_Countdown_Canvas = () => {
             >
             <Canvas
                 shadows
-                onCreated={(state) => {
-                    state.gl.setClearColor('#0A171C')
-                    state.scene.fog = new Fog('#306A83', 0, 15)
-                }}
+                // onCreated={(state) => {
+                //     state.gl.setClearColor('#0A171C')
+                //     state.scene.fog = new Fog('#306A83', 0, 15)
+                // }}
             >
-                {/* <SoftShadows
-                    
-            /> */}
-                <PerspectiveCamera makeDefault position={[0, 0, 5]} />
-                <Environment files='./environment/evening_road_01_puresky_1k.hdr' />
+                <PerspectiveCamera makeDefault position={[0, 0, 1]} />
+                <Environment files='./environment/vignaioli_night_2k.hdr' />
                 <Experience />
                 <OrbitControls
                     minPolarAngle={Math.PI / 2 - (45 * Math.PI) / 180}
                     maxPolarAngle={Math.PI / 2 - (5 * Math.PI) / 180}
-                    minDistance={3}
-                    maxDistance={5}
+                    minDistance={1}
+                    maxDistance={2}
                     enablePan={false}
                 />
-                <directionalLight
+                {/* <directionalLight
                     castShadow
                     position={[2.5, 8, 5]}
                     intensity={1}
                     shadow-mapSize={1024}
-                />
+                /> */}
             </Canvas>
         </m.div>
     )

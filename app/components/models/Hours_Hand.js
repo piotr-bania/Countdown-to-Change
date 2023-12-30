@@ -21,7 +21,7 @@ const Hours_Hand = () => {
             castShadow
             receiveShadow
             geometry={nodes.hours.geometry}
-            material={materials.red}
+            material={materials.violet_dark}
             position={nodes.hours.position}
         />
     )
