@@ -1,26 +1,19 @@
-'use client'
-
-import React, { useRef } from 'react'
-import NYE_Countdown_Text from './timers/NYE_Countdown_Text'
-import { useGLTF } from '@react-three/drei'
+import Live_Time from './timers/Live_Time'
+import Hours_Hand from './models/Hours_Hand'
+import Minutes_Hand from './models/Minutes_Hand'
+import Seconds_Hand from './models/Seconds_Hand'
+import Base_Scene from './models/Base_Scene'
+import Water from './models/Water'
 
 const Experience = () => {
-    const sceneRef = useRef()
-    const scene = useGLTF('./models/scene.glb')
-
     return (
-        <group>
-            <NYE_Countdown_Text />
-
-            <mesh
-                ref={sceneRef}
-                scale={2}
-                position={[0, -1.5, 0]}
-                castShadow
-                receiveShadow
-                >
-                <primitive object={scene.scene} />
-            </mesh>
+        <group position={[0, -.5, 0]}>
+            <Seconds_Hand />
+            <Minutes_Hand />
+            <Hours_Hand />
+            <Base_Scene />
+            {/* <Water /> */}
+            {/* <Live_Time /> */}
         </group>
     )
 }

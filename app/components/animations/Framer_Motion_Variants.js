@@ -6,8 +6,8 @@ export const canvas_variant = {
         opacity: 1,
         transition: {
             type: 'spring',
-            duration: 3,
-            delay: 2.25
+            duration: 5,
+            delay: .25
         }
     }
 }
