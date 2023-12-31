@@ -22,22 +22,22 @@ const NYE_Countdown_Canvas = () => {
                 //     state.scene.fog = new Fog('#306A83', 0, 15)
                 // }}
             >
-                <PerspectiveCamera makeDefault position={[0, 0, 1]} />
+                <PerspectiveCamera makeDefault position={[0, 0, 3]} />
                 <Environment files='./environment/vignaioli_night_2k.hdr' />
                 <Experience />
                 <OrbitControls
-                    minPolarAngle={Math.PI / 2 - (45 * Math.PI) / 180}
+                    minPolarAngle={Math.PI / 2 - (5 * Math.PI) / 180}
                     maxPolarAngle={Math.PI / 2 - (5 * Math.PI) / 180}
-                    minDistance={1}
-                    maxDistance={2}
+                    minDistance={3}
+                    maxDistance={3}
                     enablePan={false}
                 />
-                {/* <directionalLight
+                <directionalLight
                     castShadow
                     position={[2.5, 8, 5]}
                     intensity={1}
                     shadow-mapSize={1024}
-                /> */}
+                />
             </Canvas>
         </m.div>
     )

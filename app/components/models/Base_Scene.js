@@ -4,19 +4,23 @@ import { useFrame } from '@react-three/fiber'
 
 const Base_Scene = () => {
     const sceneRef = useRef()
-    const { scene, animations } = useGLTF('./models/surreal_clock.glb')
+    const { scene, animations } = useGLTF('./models/scene.glb')
     const { actions } = useAnimations(animations, sceneRef)
 
-    // useEffect(() => {
-    //     if (actions) {
-    //         actions['SphereAction'].play()
-    //     }
-    // }, [actions])
+    useEffect(() => {
+        if (actions) {
+            actions['7Action'].play()
+            actions['12Action'].play()
+            actions['THREEAction'].play()
+        }
+    }, [actions])
 
     return (
         <>
             <mesh
                 ref={sceneRef}
+                castShadow
+                receiveShadow
             >
                 <primitive object={scene} />
             </mesh>

@@ -21,7 +21,7 @@ const Seconds_Hand = () => {
             castShadow
             receiveShadow
             geometry={nodes.seconds.geometry}
-            material={materials.metal}
+            material={materials.gold}
             position={nodes.seconds.position}
         />
     )
