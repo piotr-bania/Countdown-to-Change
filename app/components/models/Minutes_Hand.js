@@ -6,7 +6,7 @@ const Live_Time = () => new Date()
 
 const Minutes_Hand = () => {
     const handRef = useRef()
-    const { nodes, materials } = useGLTF('./models/clock_hands.glb')
+    const { nodes, materials } = useGLTF('./models/hands.glb')
 
     useFrame(() => {
         const currentTime = Live_Time()
@@ -21,7 +21,7 @@ const Minutes_Hand = () => {
             castShadow
             receiveShadow
             geometry={nodes.minutes.geometry}
-            material={materials.gold}
+            material={materials.titanium}
             position={nodes.minutes.position}
         />
     )

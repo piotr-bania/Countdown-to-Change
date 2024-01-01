@@ -1,5 +1,4 @@
 import './globals.scss'
-import Navbar from './components/navigation/Navbar'
 
 export const metadata = {
     title: 'Chronos Chronicles – 3D New Year Countdown',
@@ -11,7 +10,6 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <Navbar />
                 {children}
             </body>
         </html>

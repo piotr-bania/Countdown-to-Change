@@ -1,9 +1,9 @@
-import NYE_Countdown_Canvas from './components/NYE_Countdown_Canvas'
+import Scene_Canvas from './components/Scene_Canvas'
 
 export default function Home() {
     return (
         <main>
-            <NYE_Countdown_Canvas />
+            <Scene_Canvas />
         </main>
     )
 }
