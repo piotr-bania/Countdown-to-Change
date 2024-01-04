@@ -7,14 +7,14 @@ import Seconds_Hand from './models/Seconds_Hand'
 
 const Experience = () => {
     return (
-        <group position={[0, 0, 0]}>
+        <>
             <Background />
             <Static_Clock_Parts />
             <Animated_Clock_Parts />
             <Seconds_Hand />
             <Minutes_Hand />
             <Hours_Hand />
-        </group>
+        </>
     )
 }
 
