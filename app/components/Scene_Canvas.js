@@ -16,7 +16,7 @@ const Scene_Canvas = () => {
             >
             <Canvas shadows >
                 <PerspectiveCamera makeDefault position={[0, 0, 4]} />
-                <Environment files='./environment/syferfontein_18d_clear_puresky_1k.hdr' />
+                <Environment files='./environment/vignaioli_night_2k.hdr' />
                 <directionalLight
                     castShadow
                     position={[-2, 5, 1]}
