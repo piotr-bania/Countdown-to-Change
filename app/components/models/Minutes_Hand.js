@@ -4,14 +4,23 @@ import { useGLTF } from '@react-three/drei'
 
 const Live_Time = () => new Date()
 
+const calculate_minutes_angle = () => {
+    const currentTime = Live_Time()
+    const minutes = currentTime.getMinutes()
+    const seconds = currentTime.getSeconds()
+
+    const exact_minute = minutes + seconds / 60
+    const angle = ((exact_minute / 60) * Math.PI * 2) - Math.PI / 2
+
+    return angle
+}
+
 const Minutes_Hand = () => {
     const handRef = useRef()
     const { nodes, materials } = useGLTF('./models/hands.glb')
 
     useFrame(() => {
-        const currentTime = Live_Time()
-        const minutes = currentTime.getMinutes()
-        const angle = ((minutes / 60) * Math.PI * 2) - Math.PI / 2
+        const angle = calculate_minutes_angle()
         handRef.current.rotation.z = -angle
     })
 
